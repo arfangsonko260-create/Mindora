@@ -1,1 +1,198 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mindora - Apprendre autrement</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #10142B;
+      color: white;
+    }
+
+    header {
+      padding: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #303653;
+    }
+
+    .logo {
+      font-size: 27px;
+      font-weight: bold;
+      color: #A58BFF;
+    }
+
+    .menu {
+      color: #D5D5E8;
+      font-size: 14px;
+    }
+
+    main {
+      max-width: 850px;
+      margin: auto;
+      padding: 65px 22px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #29244B;
+      color: #BDAAFF;
+      padding: 9px 15px;
+      border-radius: 30px;
+      font-size: 13px;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: 42px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      color: #9B7BFF;
+    }
+
+    .intro {
+      color: #B9BDD1;
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #7957FF;
+      color: white;
+      text-decoration: none;
+      padding: 15px 23px;
+      border-radius: 12px;
+      font-weight: bold;
+    }
+
+    .section-title {
+      margin-top: 65px;
+      margin-bottom: 22px;
+      font-size: 23px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .card {
+      background: #1B2140;
+      border: 1px solid #343A5C;
+      padding: 22px;
+      border-radius: 15px;
+    }
+
+    .card h3 {
+      margin: 12px 0;
+      color: #BDAAFF;
+    }
+
+    .card p {
+      color: #B9BDD1;
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #858BA5;
+      border-top: 1px solid #303653;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 34px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">✦ Mindora</div>
+    <div class="menu">Apprendre · Explorer · Réussir</div>
+  </header>
+
+  <main>
+    <div class="badge">✦ L'apprentissage nouvelle génération</div>
+
+    <h1>
+      Apprends plus.<br>
+      <span>Comprends mieux.</span>
+    </h1>
+
+    <p class="intro">
+      Découvre une nouvelle façon d'apprendre.
+      Organise tes cours, teste tes connaissances
+      et développe ton potentiel avec Mindora.
+    </p>
+
+    <a href="#espaces" class="button">
+      Découvrir Mindora →
+    </a>
+
+    <h2 class="section-title" id="espaces">
+      Ton espace d'apprentissage
+    </h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <div>📚</div>
+        <h3>Mes cours</h3>
+        <p>Retrouve et organise tes ressources pédagogiques.</p>
+      </div>
+
+      <div class="card">
+        <div>🧠</div>
+        <h3>Flashcards</h3>
+        <p>Mémorise tes leçons avec des cartes interactives.</p>
+      </div>
+
+      <div class="card">
+        <div>📝</div>
+        <h3>Quiz et QCM</h3>
+        <p>Teste tes connaissances et évalue tes progrès.</p>
+      </div>
+
+      <div class="card">
+        <div>🤖</div>
+        <h3>Mindora AI</h3>
+        <p>Un futur assistant intelligent pour t'accompagner.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    © 2026 Mindora — Learn more. Understand better. Go further.
+  </footer>
+
+</body>
+</html>
+
