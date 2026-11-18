@@ -2,196 +2,311 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mindora - Apprendre autrement</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mindora - Apprendre autrement</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #10142B;
-      color: white;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background: #10142B;
+  color: white;
+}
 
-    header {
-      padding: 22px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #303653;
-    }
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #303653;
+}
 
-    .logo {
-      font-size: 27px;
-      font-weight: bold;
-      color: #A58BFF;
-    }
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: #A58BFF;
+  text-decoration: none;
+}
 
-    .menu {
-      color: #D5D5E8;
-      font-size: 14px;
-    }
+.menu {
+  color: #D5D5E8;
+  font-size: 13px;
+}
 
-    main {
-      max-width: 850px;
-      margin: auto;
-      padding: 65px 22px;
-    }
+main {
+  max-width: 850px;
+  margin: auto;
+  padding: 45px 22px;
+}
 
-    .badge {
-      display: inline-block;
-      background: #29244B;
-      color: #BDAAFF;
-      padding: 9px 15px;
-      border-radius: 30px;
-      font-size: 13px;
-      margin-bottom: 25px;
-    }
+.page {
+  display: none;
+}
 
-    h1 {
-      font-size: 42px;
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
+.page:target {
+  display: block;
+}
 
-    h1 span {
-      color: #9B7BFF;
-    }
+#accueil {
+  display: block;
+}
 
-    .intro {
-      color: #B9BDD1;
-      font-size: 17px;
-      line-height: 1.7;
-      margin-bottom: 32px;
-    }
+body:has(.page:target) #accueil {
+  display: none;
+}
 
-    .button {
-      display: inline-block;
-      background: #7957FF;
-      color: white;
-      text-decoration: none;
-      padding: 15px 23px;
-      border-radius: 12px;
-      font-weight: bold;
-    }
+.badge {
+  display: inline-block;
+  background: #29244B;
+  color: #BDAAFF;
+  padding: 9px 15px;
+  border-radius: 30px;
+  font-size: 13px;
+  margin-bottom: 25px;
+}
 
-    .section-title {
-      margin-top: 65px;
-      margin-bottom: 22px;
-      font-size: 23px;
-    }
+h1 {
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-    }
+h1 span {
+  color: #9B7BFF;
+}
 
-    .card {
-      background: #1B2140;
-      border: 1px solid #343A5C;
-      padding: 22px;
-      border-radius: 15px;
-    }
+.intro {
+  color: #B9BDD1;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
 
-    .card h3 {
-      margin: 12px 0;
-      color: #BDAAFF;
-    }
+.button {
+  display: inline-block;
+  background: #7957FF;
+  color: white;
+  text-decoration: none;
+  padding: 14px 21px;
+  border-radius: 11px;
+  font-weight: bold;
+}
 
-    .card p {
-      color: #B9BDD1;
-      line-height: 1.5;
-      font-size: 14px;
-    }
+.section-title {
+  margin: 55px 0 22px;
+  font-size: 23px;
+}
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #858BA5;
-      border-top: 1px solid #303653;
-      margin-top: 60px;
-    }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
 
-    @media (max-width: 500px) {
-      h1 {
-        font-size: 34px;
-      }
+.card {
+  display: block;
+  background: #1B2140;
+  border: 1px solid #343A5C;
+  padding: 22px;
+  border-radius: 15px;
+  color: white;
+  text-decoration: none;
+}
 
-      .cards {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+.card h3 {
+  color: #BDAAFF;
+  margin: 12px 0;
+}
+
+.card p {
+  color: #B9BDD1;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.course {
+  background: #1B2140;
+  border: 1px solid #343A5C;
+  padding: 23px;
+  border-radius: 15px;
+  margin: 18px 0;
+}
+
+.course h3 {
+  color: #BDAAFF;
+  margin-bottom: 13px;
+}
+
+.course p {
+  color: #B9BDD1;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.back {
+  display: inline-block;
+  color: #BDAAFF;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 15px;
+  margin-top: 55px;
+  border-top: 1px solid #303653;
+  color: #858BA5;
+  font-size: 13px;
+}
+
+@media(max-width: 500px) {
+  h1 { font-size: 34px; }
+  .cards { grid-template-columns: 1fr; }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <div class="logo">✦ Mindora</div>
-    <div class="menu">Apprendre · Explorer · Réussir</div>
-  </header>
+<header>
+  <a href="#accueil" class="logo">✦ Mindora</a>
+  <div class="menu">Apprendre · Explorer · Réussir</div>
+</header>
 
-  <main>
-    <div class="badge">✦ L'apprentissage nouvelle génération</div>
+<main>
 
-    <h1>
-      Apprends plus.<br>
-      <span>Comprends mieux.</span>
-    </h1>
+<section id="accueil" class="page">
+  <div class="badge">✦ L'apprentissage nouvelle génération</div>
 
-    <p class="intro">
-      Découvre une nouvelle façon d'apprendre.
-      Organise tes cours, teste tes connaissances
-      et développe ton potentiel avec Mindora.
-    </p>
+  <h1>
+    Apprends plus.<br>
+    <span>Comprends mieux.</span>
+  </h1>
 
-    <a href="#espaces" class="button">
-      Découvrir Mindora →
+  <p class="intro">
+    Découvre une nouvelle façon d'apprendre.
+    Organise tes cours, teste tes connaissances
+    et développe ton potentiel avec Mindora.
+  </p>
+
+  <a href="#espaces" class="button">Découvrir Mindora →</a>
+
+  <h2 class="section-title" id="espaces">
+    Ton espace d'apprentissage
+  </h2>
+
+  <div class="cards">
+
+    <a href="#cours" class="card">
+      <div>📚</div>
+      <h3>Mes cours</h3>
+      <p>Retrouve et organise tes ressources pédagogiques.</p>
+      <p>Accéder →</p>
     </a>
 
-    <h2 class="section-title" id="espaces">
-      Ton espace d'apprentissage
-    </h2>
+    <a href="#flashcards" class="card">
+      <div>🧠</div>
+      <h3>Flashcards</h3>
+      <p>Mémorise tes leçons avec des cartes interactives.</p>
+      <p>Découvrir →</p>
+    </a>
 
-    <div class="cards">
+    <a href="#quiz" class="card">
+      <div>📝</div>
+      <h3>Quiz et QCM</h3>
+      <p>Teste tes connaissances et évalue tes progrès.</p>
+      <p>Découvrir →</p>
+    </a>
 
-      <div class="card">
-        <div>📚</div>
-        <h3>Mes cours</h3>
-        <p>Retrouve et organise tes ressources pédagogiques.</p>
-      </div>
+    <a href="#ia" class="card">
+      <div>🤖</div>
+      <h3>Mindora AI</h3>
+      <p>Un futur assistant intelligent pour t'accompagner.</p>
+      <p>En développement</p>
+    </a>
 
-      <div class="card">
-        <div>🧠</div>
-        <h3>Flashcards</h3>
-        <p>Mémorise tes leçons avec des cartes interactives.</p>
-      </div>
+  </div>
+</section>
 
-      <div class="card">
-        <div>📝</div>
-        <h3>Quiz et QCM</h3>
-        <p>Teste tes connaissances et évalue tes progrès.</p>
-      </div>
+<section id="cours" class="page">
+  <a href="#accueil" class="back">← Accueil</a>
 
-      <div class="card">
-        <div>🤖</div>
-        <h3>Mindora AI</h3>
-        <p>Un futur assistant intelligent pour t'accompagner.</p>
-      </div>
+  <h1>📚 Mes <span>cours</span></h1>
 
-    </div>
-  </main>
+  <p class="intro">
+    Bienvenue dans ta bibliothèque pédagogique.
+    Choisis un cours pour commencer à apprendre.
+  </p>
 
-  <footer>
-    © 2026 Mindora — Learn more. Understand better. Go further.
-  </footer>
+  <div class="course">
+    <h3>🌍 Introduction à la géologie</h3>
+    <p>
+      Découvre la science qui étudie la Terre,
+      sa composition et son histoire.
+    </p>
+    <a href="#geologie" class="button">Ouvrir le cours →</a>
+  </div>
+</section>
+
+<section id="geologie" class="page">
+  <a href="#cours" class="back">← Retour aux cours</a>
+
+  <h1>🌍 <span>Géologie</span></h1>
+
+  <div class="course">
+    <h3>Leçon 1 : Définition</h3>
+    <p>
+      La géologie est la science qui étudie la Terre,
+      sa composition, sa structure, son histoire
+      et les phénomènes qui la transforment.
+    </p>
+
+    <h3>Les principales branches</h3>
+    <p><strong>Minéralogie :</strong> étude des minéraux.</p>
+    <p><strong>Pétrologie :</strong> étude des roches.</p>
+    <p><strong>Stratigraphie :</strong> étude des couches géologiques.</p>
+    <p><strong>Paléontologie :</strong> étude des fossiles.</p>
+  </div>
+</section>
+
+<section id="flashcards" class="page">
+  <a href="#accueil" class="back">← Accueil</a>
+  <h1>🧠 <span>Flashcards</span></h1>
+  <div class="course">
+    <h3>Bientôt disponible</h3>
+    <p>Nous préparons un espace pour mémoriser tes cours avec des cartes interactives.</p>
+  </div>
+</section>
+
+<section id="quiz" class="page">
+  <a href="#accueil" class="back">← Accueil</a>
+  <h1>📝 <span>Quiz et QCM</span></h1>
+  <div class="course">
+    <h3>Bientôt disponible</h3>
+    <p>Tu pourras bientôt tester tes connaissances et suivre tes résultats.</p>
+  </div>
+</section>
+
+<section id="ia" class="page">
+  <a href="#accueil" class="back">← Accueil</a>
+  <h1>🤖 <span>Mindora AI</span></h1>
+  <div class="course">
+    <h3>En développement</h3>
+    <p>Un assistant pédagogique intelligent sera étudié dans une prochaine phase.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  © 2026 Mindora — Learn more. Understand better. Go further.
+</footer>
 
 </body>
 </html>
